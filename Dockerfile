@@ -27,7 +27,7 @@ RUN if [ -n "$HTTP_PROXY" ]; then \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip && \
-    pip install torch --index-url https://download.pytorch.org/whl/cpu && \
+    pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu && \
     pip install funasr fastapi "uvicorn[standard]" python-multipart
 
 COPY server.py /app/server.py
