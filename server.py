@@ -25,6 +25,7 @@ MODEL_CONFIGS = {
     "sensevoice": {
         "model": "iic/SenseVoiceSmall",
         "vad_model": "fsmn-vad",
+        "punc_model": "ct-punc",
         "vad_kwargs": {"max_single_segment_time": 30000},
     },
     "paraformer": {
