@@ -47,7 +47,8 @@ MODEL_CONFIGS = {
 
 
 def clean_text(text: str) -> str:
-    return re.sub(r'<\|[^|]*\|>', '', text).strip()
+    # Remove special tags like <|zh|>, <|NEUTRAL|> and spaced-out variants
+    return re.sub(r'<\s*\|[^|]*\|\s*>', '', text).strip()
 
 
 def load_model(model_name: str):
